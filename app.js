@@ -22,6 +22,13 @@ let users = [
   }
 ];
 
+app.use(express.static('public'))
+
+
+app.use('/home', express.static('public/home.html'))
+
+app.use('/news',express.static('public/news.html'))
+
 app.get('/', (req, res) => {
 	res.json({title: 'Our new project started'})
 })
